@@ -8,3 +8,16 @@ before_install:
 
 script:
         - docker run a4illusionist/react-app npm run test -- --coverage
+
+deploy:
+        provider: elasticbeanstalk
+        region: "us-east-2"
+        app: "react-app"
+        env: "ReactApp-env"
+        bucket_name: "elasticbeanstalk-us-east-2-979543503306"
+        bucket_path: "react-app"
+        on:
+                branch: masteir
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key:
+                secure: "$AWS_SECRET_KEY"
