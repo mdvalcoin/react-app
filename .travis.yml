@@ -13,7 +13,7 @@ deploy:
         provider: elasticbeanstalk
         region: "us-east-2"
         app: "react-app"
-        env: "ReactApp-env-1"
+        env: "ReactApp-env"
         bucket_name: "elasticbeanstalk-us-east-2-979543503306"
         bucket_path: "react-app"
         on:
